@@ -1,0 +1,27 @@
+{
+  "name": "cypress-templateTest",
+  "version": "1.0.0",
+  "description": "cypress template for test",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "runOnChrome": "cypress run --browser chrome",
+    "test:headless": "cypress run --browser chrome --headless"
+  },
+  "author": "ariana mendez",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.17.4",
+    "cypress-iframe": "^1.0.1"
+  },
+  "Cypress-cucumber-preprocessor": {
+    "nonGlobalStepdefinitions": true
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "esbuild": "^0.16.16",
+    "path": "^0.12.7"
+  }
+}

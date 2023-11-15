@@ -1,0 +1,11 @@
+node_modules
+*.log
+*.aes
+cypress/logs
+results/
+.history
+.vscode
+.env
+.DS_Store
+.mp4
+.png
