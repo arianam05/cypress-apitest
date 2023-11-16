@@ -1,7 +1,7 @@
 {
-  "name": "cypress-templateTest",
+  "name": "cypress-apitest",
   "version": "1.0.0",
-  "description": "cypress template for test",
+  "description": "cypress for api test",
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
