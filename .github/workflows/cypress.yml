@@ -1,0 +1,34 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests and generate report
+        run: |
+          npx cypress run --headless --browser chrome
+          # Puedes añadir más comandos aquí si necesitas ejecutar pruebas en diferentes navegadores
+          npx mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochawesome.json
+          npx marge cypress/reports/mochawesome.json --reportDir cypress/reports --inline
+        env:
+          CI: true
