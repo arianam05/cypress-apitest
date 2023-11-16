@@ -1,0 +1,18 @@
+{
+    "id": 535,
+    "first_name": "Ricky",
+    "height_feet": null,
+    "height_inches": null,
+    "last_name": "Pierce",
+    "position": "",
+    "team": {
+        "id": 17,
+        "abbreviation": "MIL",
+        "city": "Milwaukee",
+        "conference": "East",
+        "division": "Central",
+        "full_name": "Milwaukee Bucks",
+        "name": "Bucks"
+    },
+    "weight_pounds": null
+}

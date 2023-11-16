@@ -6,6 +6,7 @@ const createEsBuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl: 'https://www.balldontlie.io/api/v1/',
     async setupNodeEvents(on, config) {
 
       // implement node event listeners here
@@ -21,3 +22,5 @@ module.exports = defineConfig({
     
   },
 });
+
+

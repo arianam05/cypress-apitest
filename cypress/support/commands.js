@@ -24,3 +24,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('interceptAPI', () => {
+    cy.intercept('GET', 'https://www.balldontlie.io/api/v1/**').as('apiRequest');
+});
