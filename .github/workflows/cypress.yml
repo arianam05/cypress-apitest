@@ -27,7 +27,6 @@ jobs:
       - name: Run Cypress tests and generate report
         run: |
           npx cypress run --headless --browser chrome
-          # Puedes añadir más comandos aquí si necesitas ejecutar pruebas en diferentes navegadores
           npx mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochawesome.json
           npx marge cypress/reports/mochawesome.json --reportDir cypress/reports --inline
         env:
